@@ -48,10 +48,10 @@ void extractTextureBitmap(int ImageCount, char filePathIn[255], char PaletteFile
 void extractPanels(int ImageCount, char filePathIn[255], char PaletteFile[255], int PaletteNo, int BitmapSize, int FileType, int game, char OutFileName[255], int useTGA);
 void extractCrittersUW1(char fileAssoc[255], char fileCrit[255], char PaletteFile[255], int PaletteNo, int BitmapSize, int FileType, int game, int CritterNo, char OutFileName[255], int useTGA, int SkipFileOutput, int ItemId, int fileXX, int fileYY);
 void extractCrittersUW2(char fileAssoc[255], char fileCrit[255], char PaletteFile[255], int PaletteNo, int BitmapSize, int FileType, int game, int CritterNo, char OutFileName[255], int useTGA, int SkipFileOutput);
-void writeBMP(unsigned char *buffer, long Start, long SizeH, long SizeV, int index, palette *pal, char OutFileName[255]);
-void writeBMPBW(unsigned char *bits, long Start, long SizeH, long SizeV, int index, palette *pal, char OutFileName[255]);
-void writeTGA(unsigned char *bits, long Start, long SizeH, long SizeV, int index, palette *pal, char OutFileName[255], int Alpha);
-void getPalette(char filePathPal[255], palette *pal, int paletteNo);
+void writeBMP(unsigned char *buffer, long Start, long SizeH, long SizeV, int index, palette *pal, const char OutFileName[255]);
+void writeBMPBW(unsigned char *bits, long Start, long SizeH, long SizeV, int index, palette *pal, const char OutFileName[255]);
+void writeTGA(unsigned char *bits, long Start, long SizeH, long SizeV, int index, palette *pal, const char OutFileName[255], int Alpha);
+void getPalette(const char filePathPal[255], palette *pal, int paletteNo);
 void getPaletteIndex(char filePathPal[255], palette *pal, int paletteNo);
 void LoadAuxilaryPal(char auxpalPath[255], palette auxpal[16], palette gamepal[256], int PalIndex);
 void copyNibbles(unsigned char *InputData, unsigned char  *OutputData, int NoOfNibbles, int add_ptr);
@@ -61,7 +61,7 @@ void DecodeRLEBitmap(unsigned char *imageData, int datalen, int imageWidth, int 
 //void writeBMP4(unsigned char *bits, long Start, long SizeH, long SizeV, int index, palette auxpal[16], char OutFileName[255]);
 int getNibble(unsigned char *nibbles, int *addr_ptr);
 
-bool load_cuts_anim(char filePathIn[255], char filePathOut[255], int useTGA, bool ErrorHandling, int isAlpha);
+bool load_cuts_anim(char filePathIn[255], const char filePathOut[255], int useTGA, bool ErrorHandling, int isAlpha);
 
 void ua_image_decode_rle(unsigned char *FileIn, unsigned char *pixels, unsigned int bits, unsigned int datalen, unsigned int maxpix, int addr_ptr, unsigned char *auxpal);
 void extractUW2Bitmaps(char filePathIn[255],char PaletteFile[255],int PaletteNo,char OutFileName[255], int useTGA);

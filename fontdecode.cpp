@@ -50,7 +50,7 @@ int DecodeUWFont()
 */
 	palette *pal;
 	pal = new palette[256];
-	getPalette("c:\\games\\uwdemo\\data\\pals.dat", pal,0);
+	getPalette(strdup("c:\\games\\uwdemo\\data\\pals.dat"), pal,0);
 
 
 

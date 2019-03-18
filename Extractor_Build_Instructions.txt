@@ -1,0 +1,5 @@
+1. Create a new project in Visual Studio Community 2017
+2. Add all the .h and .cpp files to the Source Files of the new Solution, in the Solution Explorer pane.
+3. Go to Project -> Properties -> C/C++ -> General and disable SDL Checks.
+4. Select "Debug" and "x86", then click on "Local Windows Debugger". It should compile your the Extractor to the Solution Folder, Inside the Debug folder. Check it in Windows Explorer.
+5. The program requires the gamepaths.txt to be on the same directory, with the correct directories present. Ideally, the paths should be very short (I had problems using slightly longer paths, like 5 folders deep). If the file is configured correctly, it should work correctly.

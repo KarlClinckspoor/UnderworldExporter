@@ -282,7 +282,7 @@ void RenderUnityEntityPaintingUW(int game, float x, float y, float z, ObjectItem
 	
 	}
 
-void CreateUnityScriptCall(int game, float x, float y, float z, ObjectItem &currobj, ObjectItem objList[1600], tile LevelInfo[64][64], char *ScriptName)
+void CreateUnityScriptCall(int game, float x, float y, float z, ObjectItem &currobj, ObjectItem objList[1600], tile LevelInfo[64][64], const char *ScriptName)
 	{//for objects that start scripts.
 	//TriggerTargetX = currobj.quality;
 	//TriggerTargetY = currobj.owner;

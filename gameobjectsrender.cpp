@@ -152,7 +152,7 @@ void createScriptCall(ObjectItem &currobj, float x, float y, float z)
 	EntityCount++;
 	}
 
-void createScriptCall(ObjectItem &currobj, float x, float y, float z, char *callname)
+void createScriptCall(ObjectItem &currobj, float x, float y, float z, const char *callname)
 	{//Entity for running a script when triggered.
 	fprintf(MAPFILE, "\n// entity %d\n{\n", EntityCount);
 	fprintf(MAPFILE, "\"classname\" \"atdm:target_callscriptfunction\"\n");

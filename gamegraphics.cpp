@@ -361,7 +361,7 @@ void extractTextureBitmap(int ImageCount, char filePathIn[255], char PaletteFile
 	printf("Max Width: %d, Max Height: %d", MaxWidth, MaxHeight);
 }
 
-void getPalette(char filePathPal[255], palette *pal, int paletteNo)
+void getPalette(const char filePathPal[255], palette *pal, int paletteNo)
 {
 	FILE *filePal = NULL;
 	unsigned char *palf;
@@ -392,7 +392,7 @@ int palAddr = paletteNo * 256;
 	unsigned char *xferOut = new unsigned char[fileSizePal*16];
 
 	fclose(filePal);
-	writeTGA(xfer, 0, fileSizePal, 1, 0, pal, "xferpal.tga",0);
+	writeTGA(xfer, 0, fileSizePal, 1, 0, pal, "xferpal.tga", 0);
 return;
 }
 
@@ -438,7 +438,7 @@ void getPaletteIndex(char filePathPal[255], palette *pal, int paletteNo)
 	}
 
 
-void writeBMP(unsigned char *bits, long Start, long SizeH, long SizeV, int index, palette *pal, char OutFileName[255])
+void writeBMP(unsigned char *bits, long Start, long SizeH, long SizeV, int index, palette *pal, const char OutFileName[255])
 {
 if (ACTUALLY_EXTRACT_FILES == 0)
 	{
@@ -875,6 +875,7 @@ void extractPanels(int ImageCount, char filePathIn[255], char PaletteFile[255], 
 				//textureOffset = 1;//textureOffset + 1;
 				if (useTGA == 1)
 					{
+					printf("Here!");
 					writeTGA(textureFile, textureOffset, BitMapWidth, BitMapHeight, i, pal, OutFileName,0);
 					}
 				else
@@ -1544,7 +1545,7 @@ void ua_image_decode_rle(unsigned char *FileIn, unsigned char *pixels, unsigned 
 	}
 }
 
-bool load_cuts_anim(char filePathIn[255], char filePathOut[255],int useTGA, bool ErrorHandling, int isAlpha)
+bool load_cuts_anim(char filePathIn[255], const char filePathOut[255],int useTGA, bool ErrorHandling, int isAlpha)
 	{
 useTGA=1;
 printf("%s\n", filePathIn);
@@ -1766,7 +1767,7 @@ void myPlayRunSkipDump(Uint8 *srcP, Uint8 *dstP)
 		}
 	}
 
-void writeTGA(unsigned char *bits, long Start, long SizeH, long SizeV, int index, palette *pal, char OutFileName[255], int Alpha)
+void writeTGA(unsigned char *bits, long Start, long SizeH, long SizeV, int index, palette *pal, const char OutFileName[255], int Alpha)
 	{
 	if (ACTUALLY_EXTRACT_FILES == 0)
 		{

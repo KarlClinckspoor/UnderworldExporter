@@ -220,7 +220,7 @@ void BullFrogScript()
 }
 
 
-void EMAILScript(char objName[80], ObjectItem currObj, int logChunk)
+void EMAILScript(const char objName[80], ObjectItem currObj, int logChunk)
 {
 	//printf("void start_%s()\n{",UniqueObjectName(currObj));
 	fprintf(fBODY,"\n\t$data_reader_trigger.setKey(\"snd_say\",\"shock_audio_log_%04d\");",logChunk);
@@ -507,7 +507,7 @@ void entranceteleporters()
 //todo
 }
 
-void tobedone(char desc[80])
+void tobedone(const char desc[80])
 	{
 	fprintf(fBODY,"\tsys.println(\"TODO:%s\");\n",desc);
 	}

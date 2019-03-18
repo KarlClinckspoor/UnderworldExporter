@@ -270,7 +270,7 @@ int main()
 	uw2_graphics_file[43] = "Cuts\\LBACK006.BYT";
 	uw2_graphics_file[44] = "Cuts\\LBACK007.BYT";
 
-	 char *uw1_cuts_file[47];
+	const char *uw1_cuts_file[47];
 	uw1_cuts_file[0] = "cuts\\cs000.n01";//   black screen
 	uw1_cuts_file[1] = "cuts\\cs000.n02";// * garamon in swirling air
 	uw1_cuts_file[2] = "cuts\\cs000.n03";//   garamon talking
@@ -319,7 +319,7 @@ int main()
 	uw1_cuts_file[45] = "cuts\\cs000.n13";
 	uw1_cuts_file[46] = "cuts\\cs000.n14";
 
-	char *uw1_cuts_out_file[47];
+	const char *uw1_cuts_out_file[47];
 	uw1_cuts_out_file[0] = "cs000_n01";//   black screen
 	uw1_cuts_out_file[1] = "cs000_n02";// * garamon in swirling air
 	uw1_cuts_out_file[2] = "cs000_n03";//   garamon talking
@@ -417,7 +417,7 @@ int main()
 	uw1_cuts_alpha[45] = 0;
 	uw1_cuts_alpha[46] = 0;
 
-	char *uw2_cuts_file[57];
+	const char *uw2_cuts_file[57];
 	uw2_cuts_file[0] = "cuts\\CS000.N00";
 	uw2_cuts_file[1] = "cuts\\CS000.N01";
 	uw2_cuts_file[2] = "cuts\\CS000.N02";
@@ -536,7 +536,7 @@ int main()
 	uw2_cuts_alpha[56] = 0;
 
 
-	char *uw2_cuts_out_file[57];
+	const char *uw2_cuts_out_file[57];
 	uw2_cuts_out_file[0] = "CS000_N00";
 	uw2_cuts_out_file[1] = "CS000_N01";
 	uw2_cuts_out_file[2] = "CS000_N02";

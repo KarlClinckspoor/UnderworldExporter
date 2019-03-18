@@ -1946,7 +1946,7 @@ int getObjectIDByClass(int objClass, int subClass, int subClassIndex)
 void shockCommonObject()
 {//offset dec 5099
 //Read in some common object properties file to find some useful info.
-char *filePathCO = SHOCK_COMMONOBJ_FILE;
+const char *filePathCO = SHOCK_COMMONOBJ_FILE;
 FILE *f;
 int RunningTotalExtraFrames=0;
 unsigned char *obj_ark; 

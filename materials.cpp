@@ -19,7 +19,7 @@ void BuildXDataFile(int game)
 	unsigned char *tmp_ark;
 	long chunkPackedLength;
 	long chunkUnpackedLength;
-	char *filePath = SHOCK_STRINGS_FILE;
+	const char *filePath = SHOCK_STRINGS_FILE;
 	FILE *file = NULL;      // File pointer
 
 	if (fopen_s(&file, filePath, "rb") != 0)
@@ -646,7 +646,7 @@ void BuildWORDSXData(int game)
 	unsigned char *tmp_ark;
 	long chunkPackedLength;
 	long chunkUnpackedLength;
-	char *filePath = SHOCK_STRINGS_FILE;
+	const char *filePath = SHOCK_STRINGS_FILE;
 	FILE *file = NULL;      // File pointer
 
 	if (fopen_s(&file, filePath, "rb") != 0)
